@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>สรุปเนื้อหาแฟกทอเรียลแบบครบจบ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body {
+            font-family: 'Mitr', sans-serif;
+            background-image: url('BG_2.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 65%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: aliceblue;
+            font-size: 3vw;
+            background-color: rgb(24, 23, 23);
+            padding: 2vw;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: brown;
+            font-size: 2.5vw;
+        }
+
+        p {
+            font-size: 1.5vw;
+            color: red;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 1vw;
+            border-radius: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2vw auto;
+        }
+
+        pre,
+        pre#pfontstyle {
+            white-space: pre-wrap;
+            font-size: 1.5vw;
+            color: red;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2vw;
+            border-radius: 5px;
+            margin: 2vw 0;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+
+        ins {
+            text-decoration: underline;
+        }
+
+        del {
+            text-decoration: line-through;
+        }
+
+        hr {
+            margin: 2vw 0;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        p {
+            font-size: 1.5vw;
+            color: black;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 3vw;
+            }
+            h2 {
+                font-size: 3vw;
+            }
+            #pfontstyle,
+            #exfontstyle,
+            pre,
+            pre#pfontstyle,
+            p {
+                font-size: 2vw;
+            }
+            img {
+                margin: 5vw auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <h1>ไขข้อข้องใจอะไรคือ แฟกทอเรียล(Factorial)</h1>
+            <hr>
+            <img src="Confused.jpg" alt="Confused" height="auto" width="100%">
+            <h2>แฟกทอเรียล คือ อะไร?</h2>
+            <p id="pfontstyle">แฟกทอเรียล คือ ผลคูณของจำนวนเต็มบวกทั้งหมดตั้งแต่ n ลงไป<br>
+                หรืออธิบายให้ง่ายกว่านั้นก็คือผลคูณต่อเนื่องตั้งแต่ 1 ไปจนถึง n<br>
+                โดยที่แทนเลขที่เป็นแฟกทอเรียล(Factorial)และต้องเป็นจำนวนเต็มบวกเท่านั้น<br>
+                ซึ่งเขียนเป็นสัญลักษณ์ n! (อ่านว่า n แฟกทอเรียล)</p>
+            <p id="pfontstyle"><mark><ins>บทนิยาม</ins></mark> ถ้า n∈N แฟกทอเรียลของ n คือ 1×2×3×…×n เขียนแทนด้วยสัญลักษณ์ n!</p>
+            <h2>ค่าของแฟกทอเรียลที่ควรจดจำเพื่อให้ง่ายต่อการคิดคำนวณ คือ</h2>
+            <img src="Table5.png" alt="Factorial Table" width="60%">
+            <h2>แล้ว 0! มีค่าเท่ากับเท่าไหร่?</h2>
+            <img src="Table3.png" alt="Factorial Table 2" width="60%">
+            <h2>ตัวอย่างโจทย์แฟกทอเรียล</h2>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 1</ins> จงหาค่าของ 4!2!</p>
+            <pre id="pfontstyle">
+                4!2! = (4 × 3 × 2 × 1) × (2 × 1)
+                
+                = 24 × 2
+                
+                = 48
+            </pre>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 2</ins> จงหาค่าของ 10! / 8!</p>
+            <p id="pfontstyle">10! / 8!= (10 × 9 × 8!) / 8! = 90</p>
+            <p id="pfontstyle"><ins>*หมายเหตุ</ins> <mark>สัญลักษณ์ / คือการหารหรือเศษส่วน</mark>
+                และข้อนี้ใช้การแจกแจงค่าของค่ามากไปหาค่าน้อย</p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 3</ins> จงหาค่าของ ! (n + 2)! / (n - 1)!</p>
+            <pre id="pfontstyle">
+                (n + 2)! / (n - 1)! = (n + 2)(n + 1)(n)(n - 1)! / (n - 1)!
+    
+                = (n + 2)(n + 1)(n)
+    
+                = n^3 + 3n^2 + 2n
+            </pre>
+            <p id="pfontstyle"><ins>*หมายเหตุ</ins> <mark>สัญลักษณ์ ^ คือการยกกำลัง</mark>
+                และโจทย์ข้อนี้ทำวิธีเดียวกันกับตัวอย่างข้อที่ 2 เพียงแค่อยู่ในรูปสมการเท่านั้น</p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 4</ins> จงหาแก้สมการ 2 × [n! / (n - 2)!] + 50 =
+                (2n)! / (2n - 2)!</p>
+            <pre id="pfontstyle">
+                2 × [n! / (n - 2)!] + 50 = (2n)! / (2n - 2)!
+    
+                2 × [(n)(n - 1)(n - 2)! / (n - 2)!] + 50 = (2n)(2n - 1)(2n - 2)! / (2n - 2)!
+    
+                2 × [n(n - 1)] + 50 = 2n(2n - 1)
+    
+                2n^2 - 2n + 50 = 4n^2 -2n
+    
+                50 = 4n^2 - 2n^2
+    
+                50 = 2n^2
+    
+                2n^2 = 50
+    
+                n^2 = 25
+    
+                n = <del>-5</del>,<mark>5</mark>
+    
+                <ins>ตอบ</ins> n = 5
+            </pre>
+            <p id="pfontstyle">*สาเหตุที่ -5 ไม่ใช่คำตอบ เพราะ
+                <mark>ค่าของแฟกทอเรียลเป็นจำนวนเต็มบวกเสมอหากเป็นจำนวนเต็มลบจะหาค่าไม่ได้</mark></p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 5</ins> จงเขียนค่าของ 17 × 16 × 15 × 14
+                ให้อยู่ในรูปแฟกทอเรียล</p>
+            <pre id="pfontstyle">17 × 16 × 15 × 14 × (13! / 13!)</pre>
+            <pre id="pfontstyle"><ins>ตอบ</ins> 17! / 13!</pre>
+            <p id="pfontstyle"><ins>*หมายเหตุ</ins>
+                โจทย์ข้อนี้ให้คูณค่าของแฟกทอเรียลที่ขาดหายไปทั้งเศษและส่วนก็จะได้ค่าที่อยู่ในรูป<br>
+                แฟกทอเรียลของโจทย์ข้อนี้
+            </p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 6</ins> จงเขียนค่าของ 14 × 12 × 10 × 8 × 6 × 4 × 2
+                ให้อยู่ในรูปแฟกทอเรียล</p>
+            <pre id="pfontstyle">
+                14 × 12 × 10 × 8 × 6 × 4 × 2=(7 × 2)(6 × 2)(5 × 2)(4 × 2)(3 × 2)(2 × 2)(2 × 1)
+    
+                = (2 × 2 × 2 × 2 × 2 × 2 × 2)(7 × 6 × 5 × 4 × 3 × 2 × 1)
+    
+                = 2^7 × 7!
+            </pre>
+            <p id="pfontstyle">*โจทย์ข้อนี้ใช้การดึงตัวร่วม 2 จากจำนวนคู่ที่คูณกันอยู่</p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 7</ins> จงเขียนค่าของ 15 × 13 × 11 × 9 × 7 × 5 × 3
+                ให้อยู่ในรูปแฟกทอเรียล</p>
+            <pre id="pfontstyle">
+                15 × 13 × 11 × 9 × 7 × 5 × 3 × (14 × 12 × 10 × 8 × 6 × 4 × 2 / 14 × 12 × 10 × 8 × 6 × 4 × 2)
+    
+                = 15! / 2^7 × 7!
+            </pre>
+            <p id="pfontstyle">
+                *โจทย์ข้อนี้ให้คูณด้วยจำนวนคู่ที่ขาดหายไปทั้งเศษและส่วนและใช้วิธีเดียวกันกับตัวอย่างโจทย์<br>แฟกทอเรียลข้อที่
+                6</p>
+            <p id="exfontstyle"><ins>ยกตัวอย่างโจทย์แฟกทอเรียลข้อที่ 8</ins> จงเขียนค่าของ n^5 - 5n^3 + 4n
+                ให้อยู่ในรูปแฟกทอเรียล</p>
+            <pre id="pfontstyle">
+                n^5 - 5n^3 + 4n = n(n^4 - 5n^2 + 4)
+    
+                = n(n^2 - 4)(n^2 - 1)
+    
+                = n(n - 2)(n + 2)(n - 1)(n + 1)
+    
+                = (n + 2)(n + 1)(n)(n - 1)(n - 2)(n - 3)! / (n - 3)!
+    
+                = (n + 2)! / (n - 3)!
+            </pre>
+            <p id="exfontstyle">
+                *โจทย์ข้อนี้ใช้วิธีการแก้โจทย์ทั้งหมดจากตัวอย่างที่ผ่านๆมาอย่าลืมทบทวนเนื้อหากันด้วยนะครับ</p>
+            <hr>
+            <h2>จัดทำโดย</h2>
+            <img src="MG_98562.jpg" alt="Author" height="auto" width="250px">
+            <p2 style="font-size: 2w;">นาย ตันติธรรม ตันติธรรมธร<br>
+                นักเรียน รุ่น 142<br>
+                โรงเรียนสวนกุหลาบวิทยาลัย</p2>
+            <hr>
+            เว็บไซต์นี้จัดทำขึ้นเพื่อการศึกษาและเผยแพร่ความความรู้เพื่อประโยชน์ของสังคม <br>
+            ข้อความและรูปภาพที่ปรากฏในบทความหากพบเห็นข้อความและรูปภาพที่ไม่เหมาะสม เนื้อหาไม่ถูกต้องหรือละเมิดลิขสิทธิ์
+            <br>
+            กรุณาแจ้งผู้ดูแลระบบเพื่อดำเนินการต่อไป โปรดติดต่อ tantitham.tanti@student.sk.ac.th
+    </center>
+</body>
+
+</html>
